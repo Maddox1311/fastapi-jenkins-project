@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo 'Setting up Python environment...'
                 sh '''
-                python -m venv /mnt/d/MyCode/myvenv
+                python3 -m venv /mnt/d/MyCode/myvenv
                 source mnt/d/MyCode/myvenv/Scripts/activate
                 '''
             }
