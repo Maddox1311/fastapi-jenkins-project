@@ -23,7 +23,7 @@ pipeline {
             steps {
                 echo 'Running tests...'
                 sh '''
-                source myvenv/bin/activate
+                source mnt/d/MyCode/myvenv/Scripts/activate
                 pytest
                 '''
             }
@@ -33,7 +33,7 @@ pipeline {
             steps {
                 echo 'Starting FastAPI application...'
                 sh '''
-                source myvenv/bin/activate
+                source mnt/d/MyCode/myvenv/Scripts/activate
                 uvicorn main:app --host 0.0.0.0 --port 8000
                 '''
             }
